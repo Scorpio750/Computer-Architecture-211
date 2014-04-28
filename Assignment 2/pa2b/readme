@@ -1,0 +1,20 @@
+ASSIGNMENT 2: Mystery
+
+Upon compilation Mystery program requires two arguments: the string "Input:" followed by some string argument.
+
+Mystery will then output the sequence "Output:", followed by a string, which will be identical to your input except for the following regards:
+
+Beginning on the 4th character, Mystery will capitalize every even character of the string if it is a letter.
+
+Mystery does this in the following manner: main calls foo, which capitalizes every even character.
+
+foo then sends every character to bar, which takes the character and tests for primeness using modulus.
+
+bar then makes every prime character lowercase.
+
+
+Big O:
+
+Running time: O(n)
+
+Space complexity: O(n)

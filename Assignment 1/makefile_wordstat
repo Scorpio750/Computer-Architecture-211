@@ -1,0 +1,17 @@
+all: wordstat wordstat.o
+	
+wordstat.o: wordstat.c
+	gcc -ansi -pedantic -Wall -c -g wordstat.c
+
+wordstat: wordstat.o
+	gcc -o wordstat wordstat.o
+
+prefix_tree.o: prefix_tree.c
+	gcc -ansi -pedantic -Wall -c -g prefix_tree.c
+
+prefix_tree: prefix_tree.o
+	gcc - o prefix_tree prefix_tree.o
+clean:
+	rm -f reverse
+	rm -f hello
+	rm -f *.o

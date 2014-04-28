@@ -1,0 +1,11 @@
+Assignment 2: Game
+
+For the update method, I created a new board, which keeps track of every (i,j)th tile's neighbors.
+
+I then compare the (i,j)th tiles of the update board with the old board, and adjust the values of the old board accordingly.
+
+Big O:
+
+Running time: O(n), for n tiles
+
+Space Complexity: O(2n) = O(n)

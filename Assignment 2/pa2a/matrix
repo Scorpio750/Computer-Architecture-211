@@ -1,0 +1,8 @@
+# !/bin/bash
+# My first script
+
+PS1="\[\033[1;32m\][\$(date +%H%M)][\u@\h:\w]$\[\033[0m\] "
+while [ 1 ]
+do
+	./game 90 90
+done

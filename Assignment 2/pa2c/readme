@@ -1,0 +1,13 @@
+ASSIGNMENT 2: Prime
+
+There are 5 errors in the prime.s program, listed in order of occurrence:
+
+1. Line 6: where the program pushes %esp instead of %ebp.
+
+2. Line 8: The offset should be 8, not 12 because there is only one parameter being passed into square.
+
+3. Line 22: jmp should be jne, otherwise jmp would always go to L4 regardless of the logical test performed on line 21.
+
+4. Line 126: %esp and %ebp were swapped in the mov statement.
+
+5. Line 130: changed the argument from 0 to 4 in [addl $0, %eax] to make %eax point to argv[1] instead of the program name.
