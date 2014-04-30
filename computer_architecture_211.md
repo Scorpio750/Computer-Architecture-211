@@ -743,28 +743,22 @@ x    | 000     | xxxx   | xxxx   | 0000    | xxxxxxxx
 - Use transistors to implement logical functions: AND, OR, NOT
 - Digial symbols
 
-#### Inverter (NOT Gate)
+- Inverter (NOT Gate)
 
-- Inverts the signal being sent
+	- Inverts the signal being sent
 
 In | Out	| In	| Out	|
 :--|:------	|:-----	|:-----	|	
 0V | 2.9V	| 0		|	1	|
 2.9V | 0	| 1		|	0	|
 
-#### NOR Gate (OR-NOT)
-
-[Add example from slides]
-
-#### AND Gate
-
-
-
-#### NAND Gate (AND-NOT)
+- NOR Gate (OR-NOT)
+- AND Gate
+- NAND Gate (AND-NOT)
 
 #### Basic Logic Gate Symbols
 
-[Add example from slides]
+![Add example from slides](https://raw.githubusercontent.com/Scorpio750/Computer-Architecture-211/master/Images/Basic%20Logic%20Symbols.png)
 
 #### Decoder
 
@@ -894,7 +888,7 @@ RF  | $  | $  | $  |
 
 #### L1 Cache
 
-[insert picture from slides]
+![insert picture from slides](https://raw.githubusercontent.com/Scorpio750/Computer-Architecture-211/master/Images/L1%20Cache.png)
 
 #### Cache Mapping
 
@@ -920,3 +914,24 @@ RF  | $  | $  | $  |
 	- FIFO
 	- LRU: Least Recently Used
 	- Random: Select victim from set randomly
+	
+#### Fully Associative Caches
+
+- For a fully associative cache, set selection is trivial (there is only one)
+- Accessing line is the same as a set associative cache
+- Most flexible, (good for complex access patterns)
+
+#### Writes and Cache
+
+- Reading information from a cache is straightforward
+- What about writing?
+- What if you're writing data that is already cached (write-hit)?
+- What if the data is not in the cache (write-miss)?
+- Dealing a **write-hit**:
+	- **Write-through**: immediately write data back to memory
+	- **Write-back**: defer the write to memory for as long as possible
+	
+- Dealing with a **write-miss**:
+	- **write-allocate:** load the block into memory and update
+	- **no-write-allocate:** writes directly into memory
+
