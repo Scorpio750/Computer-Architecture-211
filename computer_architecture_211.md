@@ -1,6 +1,6 @@
 # Computer Architecture 211
-## Abhisek Bhattacharjee
-## Spring 2014
+# Abhisek Bhattacharjee
+# Spring 2014
 
 ---
 ---
