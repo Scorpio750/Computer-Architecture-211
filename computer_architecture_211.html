@@ -1,0 +1,2065 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+}
+
+</style>
+<title>Computer Architecture 211</title>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax:{inlineMath:[['$$$','$$$']]}});</script><script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<h1>Computer Architecture 211</h1>
+
+<h2>Abhisek Bhattacharjee</h2>
+
+<h2>Spring 2014</h2>
+
+<hr />
+
+<hr />
+
+<h2>Table of Contents</h2>
+
+<ol>
+<li><a href="#anchor1">C Programming</a></li>
+<li><a href="#anchor2">Number Representation</a></li>
+<li><a href="#anchor3">Assembly Programming</a></li>
+<li><a href="#anchor4">Digital Logic</a>
+
+<ol>
+<li><a href="#anchor4.1">Combinational Logic</a></li>
+<li><a href="#anchor4.2">Sequential Logic</a></li>
+</ol>
+</li>
+<li><a href="#anchor5">Caches</a></li>
+<li><a href="#anchor6">Final Review</a></li>
+</ol>
+
+
+<hr />
+
+<hr />
+
+<h3>1/30/14</h3>
+
+<h2><span id="anchor1">C Programing</span></h2>
+
+<h3>Anatomy of a C Program</h3>
+
+<pre><code>#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+
+char cMessage[] ="Hello\n";
+
+/* Execution will start here */
+int main (int argc, char **argv) //** is pointer
+{
+    int i, count;
+
+    count = atoi(argv[1]); //atoi = ask type to integer
+    for (i = 0; i &lt;count; i++) {
+        printf("Hellow %dn", i);
+        }
+}
+</code></pre>
+
+<h4>Comments</h4>
+
+<ul>
+<li>same as Java 'inline code'</li>
+<li>cannot nest comments</li>
+</ul>
+
+
+<h4>Variable Declarations</h4>
+
+<ul>
+<li>Names for data items</li>
+<li>Strong-type
+
+<ul>
+<li>Amount of data storage varies on the system</li>
+<li>this can fux with memory allocation</li>
+</ul>
+</li>
+<li>C has no garbage collector
+
+<ul>
+<li>Frees up CPU and runtime</li>
+<li>Good for latency-critical programs</li>
+</ul>
+</li>
+<li>can be local or global</li>
+</ul>
+
+
+<h4>Basic Data Types</h4>
+
+<ul>
+<li><strong>char, int, float, double</strong></li>
+<li>Modifiers
+
+<ul>
+<li>short, long: control size/range of numbers</li>
+<li>signed, unsigned: include negative numbers or not</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Operators</h4>
+
+<ul>
+<li>&amp;&amp; || ==</li>
+<li>Returns 1 for TRUE or 0 for FALSE</li>
+</ul>
+
+
+<h4>Bit Operators (Operators that mess with binary values)</h4>
+
+<ol>
+<li>~ = complement</li>
+<li>&amp; = bit AND</li>
+<li>| = bit OR</li>
+<li>^ = bit XOR ($$$\ $$$)
+
+<ul>
+<li>~0101 = 1010</li>
+<li>0101 &amp; 1010 = 0000</li>
+<li>0101 | 1010 = 1111</li>
+</ul>
+</li>
+</ol>
+
+
+<hr />
+
+<ul>
+<li>Entropy is important in designing circuits/hardware</li>
+</ul>
+
+
+<h4>Control Statements</h4>
+
+<ul>
+<li>Conditional
+
+<ul>
+<li>if-else</li>
+<li>switch</li>
+</ul>
+</li>
+<li>Iteration (loops)
+
+<ul>
+<li>while</li>
+<li>for</li>
+<li>do while</li>
+</ul>
+</li>
+<li>Specialized "go-to"
+
+<ul>
+<li>break</li>
+<li>continue</li>
+</ul>
+</li>
+<li>If-else statements are evaluated until it finds a nonzero expression and executes that statement</li>
+<li>For switch statements, the compiler evaluates the expression; the results must be integer</li>
+<li>Continues executing until "break" or "continue"</li>
+</ul>
+
+
+<h4>Loops</h4>
+
+<ul>
+<li>while, do-while, and for</li>
+</ul>
+
+
+<hr />
+
+<h3>Recitation $$$\text{with }\mathbb{Poppy!}$$$</h3>
+
+<h4>TA Information</h4>
+
+<ul>
+<li><p>Brian Poppy</p></li>
+<li><p>Office Hours: M 2-3pm Hill 357</p></li>
+<li><p>cereal.rutgers.edu</p></li>
+<li><p>Hill 248-252</p></li>
+<li><p>Linux/Mac: ssh java.cs.rutgers.edu (or any other machine)</p></li>
+</ul>
+
+
+<h4>First Project</h4>
+
+<ul>
+<li>Read through a text file, and keep track of of frequency of word occurrences</li>
+</ul>
+
+
+<h4>Shell Commands</h4>
+
+<ul>
+<li>ssh &lt;machine name> : remotely access other machines</li>
+<li>mkdir &lt;dirname></li>
+<li>cd &lt;dirname></li>
+<li>nano: text editor</li>
+<li>rm <filename> : delete file
+
+<ul>
+<li>rm -r <dirname>: delete directory</li>
+</ul>
+</li>
+<li>. : current dir</li>
+<li>.. : previous dir</li>
+<li>gcc : compile C program</li>
+<li>gcc -o <output file> <C file>: compile and specify output file</li>
+<li>exit</li>
+<li>man :manual
+
+<ul>
+<li>man <function></li>
+<li>man <section #> <function></li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Pointers</h4>
+
+<ul>
+<li><p>Identify where in memory you have your whatever</p>
+
+<pre><code>  char *argv[]
+</code></pre></li>
+</ul>
+
+
+<hr />
+
+<h3>2/4/14</h3>
+
+<h4>Functions</h4>
+
+<ul>
+<li>Similar to Java methods</li>
+<li>Components:
+
+<ul>
+<li>Name</li>
+<li>Return Type
+
+<ul>
+<li><em>void</em> if no return value</li>
+</ul>
+</li>
+<li>Parameters
+
+<ul>
+<li><strong>pass-by-value</strong></li>
+</ul>
+</li>
+<li>Body
+
+<ul>
+<li>Statements to be executed</li>
+<li>return forces exits from function and resumes execution at statement immediately after function call</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Function Calls</h4>
+
+<ul>
+<li><p>Function call as part of an expression</p>
+
+<pre><code>  x + Factorial(y)
+</code></pre></li>
+<li><p>Function call as statement</p>
+
+<pre><code>  Factorial(y);
+</code></pre></li>
+</ul>
+
+
+<h4>Function Prototypes</h4>
+
+<ul>
+<li>Can declare functions without specifying implementation</li>
+<li>int Factorial(int)
+
+<ul>
+<li>^Can specify parameter names but don't have to</li>
+<li>This is called a <em>function signature</em></li>
+</ul>
+</li>
+<li>Declarations allow function to be "used" w/o having the implementation until link time</li>
+</ul>
+
+
+<h4>I/O</h4>
+
+<p>Variety of I/O functions in C Standard Library</p>
+
+<pre><code>#include &lt;stdio.oh&gt;
+
+printf("%d\n", counter);
+</code></pre>
+
+<ul>
+<li>First string contains characters to print and formatting directives for variables</li>
+<li><p>%d is for decimal ints, %l for doubles</p>
+
+<pre><code>  scanf("%d", &amp;startPoint);
+</code></pre>
+
+<ul>
+<li>String contains formatting directives for parsing input</li>
+<li>Call says to read a decimal integer and assign it to the variable startPoint</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Memory</h4>
+
+<ul>
+<li>C's memory model matches the underlying (virtual) memory system
+
+<ul>
+<li>Array of addressable bytes</li>
+</ul>
+</li>
+<li>Variables are simply names for contiguous sequences of bytes
+
+<ul>
+<li># of bytes given by var type</li>
+</ul>
+</li>
+<li>Compiler translates names to addresses
+
+<ul>
+<li>Typically maps to smallest address</li>
+<li>Compiler and OS in tandem decide how these processes are handled</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Pointers</h4>
+
+<ul>
+<li>A pointer is just an address</li>
+<li>Can have variables of type pointer
+
+<ul>
+<li>Hold addresses as values</li>
+<li>Used for indirection</li>
+</ul>
+</li>
+<li><p>When declaring a pointer variable, need to declare the type of the data item the pointer will point to</p>
+
+<pre><code>  int *p; /* p will point to an int data item */
+</code></pre></li>
+<li>Pointer operators
+
+<ul>
+<li>De-reference: *
+
+<ul>
+<li>*p gives the value stored at the address pointed to by p</li>
+<li>Printing p will give you the <em>value</em> stored at the <strong>address</strong> stored in P.</li>
+</ul>
+</li>
+<li>Address: &amp;
+
+<ul>
+<li>&amp;v gives the address of the variable</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h5>Pointer Example</h5>
+
+<pre><code>int i;
+int *ptr;
+
+i = 4; \\store value 4 into memory loc. ass. w/ ptr
+ptr = &amp;i; \* store addr of i into memory loc. ass. w/ ptr *\
+*ptr = *ptr + 1; \* read contents of memory at addr. stored in ptr and store result into memory at the addr. stored in ptr *\
+
+i = 5 [4300] &lt;--- ptr = 4300 [4304]
+</code></pre>
+
+<ul>
+<li><p>if you didn't de-reference ptr and increment it, you would increment the value stored in ptr by the # of bytes needed to allocate memory for it.</p>
+
+<pre><code>  ptr = ptr + 1;
+
+  ptr = 4304 [4304]
+</code></pre></li>
+</ul>
+
+
+<hr />
+
+<h3>2/6/14</h3>
+
+<h3>Recitation</h3>
+
+<ul>
+<li>Makefile - automatically make executables</li>
+</ul>
+
+
+<p>File: makeFile</p>
+
+<pre><code>    all: 
+    hello.o: hello.c
+        gcc -ansi -pedantic -Wall -c
+
+    hello: hello.o
+        gcc -o hello hello.o
+
+    clean:
+        rm -f hello
+</code></pre>
+
+<ul>
+<li>Memory Model
+
+<ul>
+<li>Two types: static vs. dynamic
+
+<ul>
+<li>Stack vs. Heap</li>
+<li>Activation record is the dynamic memory associated with the heap</li>
+</ul>
+</li>
+<li>Automatic space
+
+<ul>
+<li>int A[100]
+
+<ul>
+<li>allocated when method is called, freed when released</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Allocated space
+
+<ul>
+<li>malloc</li>
+<li>calloc</li>
+<li>free</li>
+</ul>
+</li>
+<li>See man malloc</li>
+</ul>
+</li>
+</ul>
+
+
+<p>File: alloc.c</p>
+
+<pre><code>        #include &lt;stdio.h&gt;
+        #include &lt;stdlib.h&gt;
+
+        int main(int argc, char *argv[]) {
+            int num = atoi(argv[1]);
+            int *i = NULL;
+
+            i = malloc(size * (sizeof(int)));
+
+            for(int j = 0; j &lt; num; j++)
+                printf("%d\n", i[j]);
+
+            free(i);
+            return 0;
+            }
+</code></pre>
+
+<hr />
+
+<h3>2/11/14</h3>
+
+<h4>Allocating Space for Variables</h4>
+
+<h4>Dynamic Allocation</h4>
+
+<ul>
+<li>Use if we want memory area whose:
+
+<ul>
+<li>Lifetime does not match any particular function</li>
+</ul>
+</li>
+<li>Another area region of memory exists, it is called the <strong>heap</strong> or <strong>run-time heap</strong> (not related to min/max heaps)
+
+<ul>
+<li>Dynamic request for memory are allocated from this region</li>
+<li>Managed by run-time system (fancy name for library linked with all C code)</li>
+<li>Use <strong>malloc</strong> for this</li>
+</ul>
+</li>
+</ul>
+
+
+<h5>Problems that you can run into</h5>
+
+<ul>
+<li><strong>Segmentation faults</strong> are a catch-all for any kind of error</li>
+<li>a <strong>memory leak</strong> is when you forget to free memory.
+
+<ul>
+<li>This results in more data being sent to disk</li>
+<li>This slows down your processing speed by about <em>4-5 orders of magnitude</em></li>
+</ul>
+</li>
+</ul>
+
+
+<h4>malloc</h4>
+
+<ul>
+<li><p>Standard C Library provides a function for dynamic memory allocation</p>
+
+<pre><code>  void *malloc(int numBytes);
+</code></pre></li>
+<li><p>pointer is void because it can be used for any type of variable</p></li>
+<li>malloc() and free() manage the <strong>heap</strong></li>
+<li>malloc() allocates a contiguous region of memory of size numBytes if there is enough free memory and returns a pointer to the beginnning of this region
+
+<ul>
+<li>Returns NULL if insufficient free memory</li>
+</ul>
+</li>
+<li><p>How do we know how many bytes to allocate?</p>
+
+<p>  Function:</p>
+
+<pre><code>  sizeof(type)
+  sizeof(variable)
+</code></pre></li>
+<li><p>Allocate right number of bytes, then cast to the right type</p>
+
+<pre><code>  int *numbers = (int *)malloc(sizeof(int) *n);
+</code></pre></li>
+</ul>
+
+
+<h4>free</h4>
+
+<ul>
+<li>Once a dynamically allocated piece of memory is no longer needed, you need to release it
+
+<ul>
+<li>Have finite amount of memory</li>
+<li>If you don't release, you will eventually run out of heap space/cause a memory leak</li>
+</ul>
+
+
+<p>  Function:</p>
+
+<pre><code>  void free(void*);
+</code></pre></li>
+</ul>
+
+
+<h5>Example</h5>
+
+<pre><code>int airbornePlanes;
+struct flightType* planes;
+
+printf("How many planes are in the air?");
+scanf("%d", &amp;airbornePlanes);
+
+planes = (struct flightType*)malloc(sizeof(struct flightType) * 
+airbornePlanes); 
+
+//if allocation fails, malloc returns NULL
+if (planes == NULL) {
+    printf("Error in allocating the data array.\n");
+    ...
+    }
+planes[0].altitude = ...
+...
+free(planes);
+</code></pre>
+
+<h4>typedef</h4>
+
+<ul>
+<li><p><strong>typedef</strong> is used to name types (for clarity and ease-of-use)</p>
+
+<pre><code>  typedef &lt;typedef&gt;&lt;name&gt;;
+</code></pre>
+
+<p>  Examples:</p>
+
+<pre><code>  typedef int Color:
+  typedef struct flightType WeatherData
+  typedef struct ab_type {
+      int a;
+      double b;
+      } ABGroup;
+</code></pre></li>
+</ul>
+
+
+<hr />
+
+<h3>2/18/14</h3>
+
+<h4>Preprocessor</h4>
+
+<ul>
+<li>C compilation uses a preprocess called cpp</li>
+<li>The preprocessor manipulates source code in various ways before the code is passed through the compiler
+
+<ul>
+<li>Preprocessor is controlled by <em>directives</em></li>
+<li>cpp is pretty rich in functionality</li>
+</ul>
+</li>
+<li>Our use of the proprocessor will be pretty limited
+
+<ul>
+<li>#include &lt;stdio.h></li>
+<li>#include "myHeader.h"</li>
+<li><p>#ifndef MY_HEADER_H</p>
+
+<p>  #define MY_HEADER_H</p>
+
+<p>  #endif /* MY_HEADER_H */</p></li>
+</ul>
+</li>
+<li>Much useful functionality comes from <strong>Standard C Library</strong></li>
+</ul>
+
+
+<h4>Command Line Arguments</h4>
+
+<ul>
+<li><p>When using a shell</p>
+
+<pre><code>  $ hello 5
+</code></pre>
+
+<p>  Entire command line will be given to your program as a sequence of strings</p></li>
+<li>White spaces are typically the delimiters
+
+<ul>
+<li>Shell dependent</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>File I/O</h4>
+
+<ul>
+<li>A file is a contiguous set of bytes
+
+<ul>
+<li>Has a name</li>
+<li>Can create, remove, read, write, and append</li>
+</ul>
+</li>
+<li>Unix/Linux supports persistent files stored on disk
+
+<ul>
+<li>Access using system calls: open(), read(), write(), close(), create(), lseek()</li>
+<li>Provide random access</li>
+<li>Section 2 of online manual (man)</li>
+</ul>
+</li>
+<li>C supports extended interface to UNIX files
+
+<ul>
+<li>fopen(), fscanf(), fprintf(), fgetc(), fputc(), fclose()</li>
+<li>View files as streams of bytes</li>
+<li>Section 3 of man</li>
+</ul>
+</li>
+<li><p>Open a file with <em>fopen()</em>, read or write with <em>fscanf()</em> and <em>fprintf()</em></p></li>
+<li><p>Each program has three standard streams for input, output, and errors</p>
+
+<ul>
+<li>stdin, stdout, stderr</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<h3>2/20/14</h3>
+
+<h2><span id="anchor2">Number Representation</span></h2>
+
+<ul>
+<li>What do computers do?
+
+<ul>
+<li>Maniplate stored data</li>
+</ul>
+</li>
+<li>We follow what is known as <strong>Von Neumann architecture</strong> <img src="http://www.cise.ufl.edu/~mssz/CompOrg/Figure1.8-vonNeumannArch.gif" alt="Von Neumann Architecture" /></li>
+</ul>
+
+
+<h5>Converting Number Systems</h5>
+
+<ul>
+<li>Value of binary number can be computed as $$$\sum_{i=0}^n{d_i\times2^i}$$$</li>
+<li>When converting to decimal take the modulo 2 and use the remainder to determine the base digit (1 or 0).</li>
+<li>When converting to hex (base 16) chunk them into groups of 4, working from the right b/c $$$2^4=16$$$
+
+<ul>
+<li>Do the same but with chunks of three for octal</li>
+</ul>
+</li>
+<li>binary and hex are represented in the following:</li>
+</ul>
+
+
+<table>
+<thead>
+<tr>
+<th>Binary </th>
+<th> Hex </th>
+<th> Octal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0b1101 </td>
+<td> 0x5c </td>
+<td> 0o03</td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li>General formula for number systems: $$\sum_{i=0}^n{d_i\times \text{base}^i}$$</li>
+</ul>
+
+
+<h5>Big Endian vs Litle Endian</h5>
+
+<ul>
+<li>Whenever you have multiple bytes of numbers, most significant bit is on the left for <strong>Big Endian</strong>, least significant bit is left for <strong>Little Endian</strong></li>
+</ul>
+
+
+<h4>How to represent additional numbers</h4>
+
+<ul>
+<li>Represent negative #'s by complementing positive numbers</li>
+<li>Flip the one's and zero's | take the unary complement operator ~
+
+<ul>
+<li>~1100 = 0011 | one's complement</li>
+</ul>
+</li>
+</ul>
+
+
+<h5>Two's Complement</h5>
+
+<ul>
+<li>One's complement plus one</li>
+<li>Most significant bit still gives the "sign"</li>
+</ul>
+
+
+<h5>Numerical Value of Two's Complement</h5>
+
+<ul>
+<li>Given a two's complement number of length $$$n$$$, writen as $$$d_{n-1}\dots d_1\,d_0$$$
+
+<ul>
+<li>It's value is interpreted as $$$-d_{n-1}2^{n-1}+\sum_{i=0}^{n-2}d_i\,2^i$$$</li>
+<li>Range of values is then $$$[-2^{n-1},2^{n-1}-1]$$$</li>
+</ul>
+</li>
+</ul>
+
+
+<h5>Floating-point</h5>
+
+<ul>
+<li>Can be represented in scientific notation</li>
+<li>Same with binary</li>
+<li>IEEE floating point standard
+
+<ul>
+<li>3 widths for floating-point
+
+<ul>
+<li>Single (32 bits)</li>
+<li>Double (64 bits)</li>
+<li>Extended (80)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<h5>Floating point in C</h5>
+
+<ul>
+<li>32 bits single precision (type float)
+
+<ul>
+<li>1 bit for sign, 8 bits for exp, 23 bits for mantissa</li>
+<li>Range is from $$$[-2^{16}, 2^{16}-1]$$$</li>
+</ul>
+</li>
+<li>64 bits double precision (type double)
+
+<ul>
+<li>1 bit for sign, 11 bits for exponent, 52 bits for mantissa</li>
+<li>Majority of bits for mantissa = higher precision</li>
+</ul>
+</li>
+<li>Decimal to IEEE Floating point
+
+<ul>
+<li>5.625 in binary is $$$101.101\to 1.01101\times 2^2$$$</li>
+<li>Exponent field has value 2
+
+<ul>
+<li>add 127 to get 129</li>
+</ul>
+</li>
+<li>Exponent is 10000001</li>
+<li>Mantissa is 01101</li>
+<li>Sign bit is 0
+$$\color{blue}0\color{green}{10000001}\color{red}{0110100000000000000000}$$</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<h3>Recitation</h3>
+
+<ul>
+<li>See LL program</li>
+</ul>
+
+
+<hr />
+
+<h3>2/25/14</h3>
+
+<h3>Computer Arithmetic</h3>
+
+<ul>
+<li>How to deal with overflow
+
+<ul>
+<li>When you add 2 n-bit numbers together, you may end up with an n+1-bit number</li>
+<li>An <strong>overflow</strong> occurs when the result cannot fit within the size limit of the data type.</li>
+</ul>
+</li>
+<li>modulo</li>
+<li>Understand 1's complement, 2's complement</li>
+</ul>
+
+
+<h2><span id="anchor3">Assembly Programming</span></h2>
+
+<ul>
+<li>Machine interface: where software meets hardware</li>
+<li>To understand how the hardware works, we have to understand the interface that it exports</li>
+<li>We are covering x86, which is not the only assembly language
+
+<ul>
+<li>Mobile CPUs do not use x86</li>
+</ul>
+</li>
+<li><strong>Registers:</strong> high-speed, small, memory units in the CPU</li>
+<li>Initially, the set of registers in the instruction set (<strong>ISA</strong>) is what was present in the processor</li>
+</ul>
+
+
+<h4>Assemble Programer's Units</h4>
+
+<ul>
+<li>[insert diagram of computer]</li>
+</ul>
+
+
+<hr />
+
+<h3>2/27/14</h3>
+
+<h3>Assembly</h3>
+
+<h4>Instruction Format</h4>
+
+<ul>
+<li><p>General format:</p>
+
+<pre><code>  opcode operands
+</code></pre>
+
+<ul>
+<li>Opcode:
+
+<ul>
+<li>short operands for instruction's purpose
+
+<ul>
+<li>movb, addl, etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Operands:
+
+<ul>
+<li>Immediate, register, or memory</li>
+<li>Number of operands command-depenent</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Example:</p>
+
+<pre><code>mol %ebx, (%ecx)
+</code></pre>
+
+<h4>Machine Representation</h4>
+
+<ul>
+<li><p>Each assembly instruction translated to a sequence of 1-15 bytes</p>
+
+<pre><code>  opcode byte | addressing modebyte | other bytes
+</code></pre></li>
+<li><p>Most common instruction is data transfer instruction</p>
+
+<ul>
+<li><p>mov S, D</p>
+
+<ul>
+<li>Copy value at <em>source</em> to <em>destination</em>,</li>
+</ul>
+</li>
+<li><p>Used to copy data from:</p>
+
+<ul>
+<li>Memory to register</li>
+<li>Register to memory</li>
+<li>Register to register</li>
+<li>Constant to register</li>
+</ul>
+</li>
+<li>No memory to memory or constant to memory</li>
+</ul>
+</li>
+<li><p><strong>Load:</strong> register to memory</p></li>
+<li><strong>Store:</strong> memory to register (move farther away from CPU)</li>
+</ul>
+
+
+<h4>Data Formats</h4>
+
+<ol>
+<li>Byte: 8-bits</li>
+<li>Word: 16-bits (2 bytes)</li>
+<li>Double Word: 32-bits (4 bytes)</li>
+<li>Quad Word: 64-bits (8 bytes)</li>
+<li>Instructions can operate on any data size</li>
+</ol>
+
+
+<p>End character specifies what data size to be used</p>
+
+<h4>x86 Registers</h4>
+
+<ul>
+<li>General purpose are 32 bit</li>
+<li>Originally categorized into two groups with different functionality</li>
+<li>Data registers (EAX, EBX, ECX, EDX)
+
+<ul>
+<li>Holds operands</li>
+</ul>
+</li>
+<li>Pointer and Index registers (EBP, ESP, EIP, ESI, EDI)
+
+<ul>
+<li>Holds references to addresses as well as indexes</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Addressing</h4>
+
+<ul>
+<li>Immediate Addressing</li>
+<li>Direct Addressing</li>
+<li>Register Mode Addressing
+
+<ul>
+<li>%denotes register (%eax)</li>
+</ul>
+</li>
+</ul>
+
+
+<h5>Using Simple Addressing Modes</h5>
+
+<p>C Program:</p>
+
+<pre><code>void swap(int *xp, int *yp) {
+    int t0 = *xp;
+    int t1 = *yp;
+    *yp = t1;
+    *xp = t0;
+}
+</code></pre>
+
+<p>Assembly equivalent:</p>
+
+<pre><code>swap:
+//set up
+push1 %ebp
+mov1 %esp, %ebp
+push1 %ebx
+//body
+mov1 12(%ebp), %ecx
+mov1 8(%ebp), %edx
+mov1 (%ecx), %eax
+mov1 %eax, (%edx)
+mov1 %ebx, (%ebx)
+//finish
+mov1 -4(%ebp), %ebx
+mov1 %ebp, %esp
+pop1 %edp
+ret
+</code></pre>
+
+<hr />
+
+<h3>3/11/14</h3>
+
+<h3>Assembly Programming II</h3>
+
+<h4>IA32 Stack</h4>
+
+<ul>
+<li>Region of memory associated with stack discipline</li>
+<li>Grows towards lower addresses</li>
+<li>Associated with function
+
+<ul>
+<li>Stores return values, local vars, parameters, return addresses</li>
+<li>Register %esp indicates lowest stack address
+
+<ul>
+<li>address of top element</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Pushing
+
+<ul>
+<li>pushl src</li>
+<li>Write operand to address given by %esp</li>
+<li>Decrement %esp by 4</li>
+</ul>
+</li>
+<li>Popping
+
+<ul>
+<li>popl dest</li>
+<li>Read operand at address given by %esp</li>
+<li>Increment %esp by 4</li>
+<li>Write to Dest</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Procedure Control Flow</h4>
+
+<ul>
+<li>Use stack to support procedure call and return</li>
+<li>Procedure call:
+
+<ul>
+<li>call label: Push return address on stack; Jump to label</li>
+</ul>
+</li>
+<li><p>Return address value</p>
+
+<ul>
+<li>Address of instruction beyond call</li>
+<li>Example from diassambly
+804854e: e8 3d 06 00 00     call 8048b90 <main>
+8048553: 50                 push %eax
+
+<ul>
+<li>return address = 0x8048553</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Procedure return:</p>
+
+<ul>
+<li>ret:  Pop address from stack; Jump to address</li>
+</ul>
+</li>
+</ul>
+
+
+<p>%eip is program counter</p>
+
+<h5>Stack-based Languages</h5>
+
+<ul>
+<li>Pascal, C, Basic</li>
+</ul>
+
+
+<h4>Stack Frames</h4>
+
+<ul>
+<li>%ebp is Frame Pointer</li>
+<li>%esp is Stack Pointer</li>
+<li><p>Space is allocated when you enter a procedure, dealloced when you return</p></li>
+<li><p><strong>Clobber</strong></p></li>
+</ul>
+
+
+<h4>IA32/Linux Register Usage</h4>
+
+<ul>
+<li>Integer Registers</li>
+<li>Two have special uses
+
+<ul>
+<li>%ebp, %esp</li>
+</ul>
+</li>
+<li>Three managed as callee-save
+  %ebx, %esi, %edi</li>
+<li>The Stack makes Recursion work
+
+<ul>
+<li>Private storage for each instance of a procedure cal
+
+<ul>
+<li>Instantiations don't clobber each other</li>
+<li>Addressing of locals + arguments can be relative to stack positions</li>
+</ul>
+</li>
+<li>Can be managed by stack discipline</li>
+<li>Procedures return in inverse order of cells</li>
+</ul>
+</li>
+<li>IA32 Procedures Combination of Instructions + Conventions
+
+<ul>
+<li>Call/Ret instructions</li>
+<li>Register usage conventions
+
+<ul>
+<li>Caller/Callee save</li>
+<li>%ebp and %esp</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Activation record is the part of the stack that keeps track of the state of your shit</p></li>
+<li><p>Reminder: Stack grows toward smaller addresses, heap grows toward larger addresses</p></li>
+</ul>
+
+
+<hr />
+
+<h3>3/25/14</h3>
+
+<h3>Pointers and Data Structures</h3>
+
+<h4>2D Arrays</h4>
+
+<ul>
+<li>2D arrays are just a series of pointers to 1-D arrays</li>
+</ul>
+
+
+<h4>Structs</h4>
+
+<ul>
+<li>Structs must have offsets which satisfy element's alignment requirement</li>
+<li>Overall Structures Placement
+
+<ul>
+<li>Each stucture has alignment requirement K
+
+<ul>
+<li>Largest alignment of any element</li>
+</ul>
+</li>
+<li>Initial address &amp; structure length must be multiples of K</li>
+</ul>
+</li>
+</ul>
+
+
+<p>Ex:</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">char </th>
+<th align="left"> padding </th>
+<th align="left"> int[0] </th>
+<th align="left"> int[1] </th>
+<th align="left"> padding </th>
+<th align="left"> double</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">x    </td>
+<td align="left"> 000     </td>
+<td align="left"> xxxx   </td>
+<td align="left"> xxxx   </td>
+<td align="left"> 0000    </td>
+<td align="left"> xxxxxxxx</td>
+</tr>
+</tbody>
+</table>
+
+
+<hr />
+
+<h2><span id="anchor4">Digital Logic</span></h2>
+
+<p><strong>Levels of Computer Architecture</strong></p>
+
+<ul>
+<li><p>Algorithms</p>
+
+<ul>
+<li>Applications
+
+<ul>
+<li>Compilers
+
+<ul>
+<li>OS
+
+<ul>
+<li>ISA (Instruction Set Architecture)
+
+<ul>
+<li>$$$\mathrm{\mu}$$$Arch
+
+<ul>
+<li>RTL (Register Transfer Level)
+
+<ul>
+<li>VLSI (Very-Large-Scale Inegration)
+
+<ul>
+<li>Device Physics</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>RTL makes blocks of transistors to form arithmetic logic units</p></li>
+<li>ISA contains the language which the OS and Compiler will follow</li>
+<li>Computer Architecture is traditionally the study of the interaction between hardware and software (ISA and $$$\rm{\mu}$$$Arch)</li>
+<li>Backwards compatibility exists because computer architecture is <strong> <em>split</em> </strong> into stratifications of black-box engineering.</li>
+<li>Two kinds of logic: <em>sequntial logic</em> and <em>combinatorial logic</em> &lt;-- we will focus on this for digital logic</li>
+</ul>
+
+
+<h3>MOS Transistor</h3>
+
+<ul>
+<li>Two types: n-type and p-type transistors</li>
+</ul>
+
+
+<h3>Logic Gates</h3>
+
+<ul>
+<li>Use transistors to implement logical functions: AND, OR, NOT</li>
+<li><p>Digial symbols</p></li>
+<li><p>Inverter (NOT Gate)</p>
+
+<ul>
+<li>Inverts the signal being sent</li>
+</ul>
+</li>
+</ul>
+
+
+<table>
+<thead>
+<tr>
+<th align="left">In </th>
+<th align="left"> Out    </th>
+<th align="left"> In    </th>
+<th align="left"> Out   </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0V </td>
+<td align="left"> 2.9V   </td>
+<td align="left"> 0     </td>
+<td align="left">   1   </td>
+</tr>
+<tr>
+<td align="left">2.9V </td>
+<td align="left"> 0    </td>
+<td align="left"> 1     </td>
+<td align="left">   0   </td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li>NOR Gate (OR-NOT)</li>
+<li>AND Gate</li>
+<li>NAND Gate (AND-NOT)</li>
+</ul>
+
+
+<h4>Basic Logic Gate Symbols</h4>
+
+<p><img src="https://raw.githubusercontent.com/Scorpio750/Computer-Architecture-211/master/Images/Basic%20Logic%20Symbols.png" alt="Add example from slides" /></p>
+
+<h4>Decoder</h4>
+
+<ul>
+<li>$$$n$$$ inputs, $$$2^n$$$ outputs</li>
+</ul>
+
+
+<h4>Multiplexer (MUX)</h4>
+
+<ul>
+<li>$$$n$$$-bit selector and $$$2^n$$$ inputs, one output
+
+<ul>
+<li>Output equals one of the inputs, depending on selector</li>
+<li>Similar to a switch statement</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<h3>3/27/14</h3>
+
+<h4>Full Adder</h4>
+
+<p>[example from slides]</p>
+
+<ul>
+<li>S will be 1 if there are an odd # of '1's among the input parameters
+
+<ul>
+<li>This is the same thing as taking $$$A\oplus B\oplus \dotso \oplus N$$$ due to binary arithmetic</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Converting Truth Table to Boolean Expression</h4>
+
+<ul>
+<li>Given a circuit, isolate the rows in which the output of the circuit should be <em>true</em></li>
+<li>A product term that contains exactly one instance of every variable is called a <em>minterm</em></li>
+</ul>
+
+
+<h4>K-Map</h4>
+
+<p>[insert slide]</p>
+
+<ul>
+<li>Look at the groupings of 1's</li>
+<li>No diagonal groupings, but you can have block groupings</li>
+<li><strong>Grey-Code Sequence:</strong></li>
+</ul>
+
+
+<hr />
+
+<h3>4/8/14</h3>
+
+<ul>
+<li><strong>How to calculate gate delay for adders:</strong>
+  $$G=2n-1\text{ for } n \text{ bits}$$ for only sum bits. If we are interested in overflow as well, it will be $$$2n+1$$$.</li>
+</ul>
+
+
+<h4>Carry Lookahead Adder (CLA)</h4>
+
+<ul>
+<li>Goal: produce an adder circuit of shorter dephth</li>
+<li>Mechanism: rewrite the carry function
+\[\begin{align}
+c_{i+1} &amp;= a_ib_i + a_ic_i + b_ic_i \\
+&amp;= a_ib_i + c_i(a_i+b_i) \\
+&amp;= g_i + c_i(p_i) \\
+c_1 &amp;= a_0b_0 + a_0c_0 + b_0c_0 \\
+&amp;= g_0 + c_0p_0 \\
+c_2 &amp;= g_1 + c_1p_1 \\
+&amp;= g_1 + (g_0 + c_0p_0)p_1 \\
+c_2 &amp;= g_1 + g_0p_1 + c_0p_0p_1 \\
+c_3 &amp;= g_2 + g_1p_2 + g_0p_1p_2 + c_0p_0p_1p_2 \\
+\end{align}\]</li>
+</ul>
+
+
+<table>
+<thead>
+<tr>
+<th align="left">Carry Generate </th>
+<th align="left"> Carry Propogate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">$$$g_i = a_ib_i$$$ </td>
+<td align="left"> $$$p_i = a_i + b_i$$$</td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li>A <strong>CLA</strong> is must more efficient than a ripple carry</li>
+</ul>
+
+
+<h3>Sequential Logic</h3>
+
+<ul>
+<li>Latches
+
+<ul>
+<li>Set/Reset Latch</li>
+<li>Flip-Flop</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<h3>4/21/14</h3>
+
+<h2><span id="anchor5">Memory Hierarchy and Caching</span></h2>
+
+<ul>
+<li>In increasing order of $$$\mathrm L_i$$$, where L0 is the registers</li>
+<li>Computers usually have 128-256 registers</li>
+<li>L1, L2, L3 all caches
+
+<ul>
+<li>L1 has 32 Kb, 1-2 clock cycles</li>
+<li>L2 has 62-128 Kb, 4-8 clock cycles</li>
+<li>L3 has about 32 Mb 30-40 clock cycles</li>
+</ul>
+</li>
+</ul>
+
+
+<h5>Table of Memory Storage in Caches</h5>
+
+<table>
+<thead>
+<tr>
+<th>L1 </th>
+<th> L2 </th>
+<th> L3 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>32kB </td>
+<td> 256kb </td>
+<td> 8-32 MB </td>
+</tr>
+<tr>
+<td>1-2 cc </td>
+<td> 4-8 cc </td>
+<td> 30-40 cc</td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li>Everything under L3 (L4, L5) is hardware</li>
+<li>It takes billions of cycles to retrieve memory from disk</li>
+<li>Hardware is a static design type</li>
+</ul>
+
+
+<h5>Locality</h5>
+
+<ul>
+<li>Two kinds of locality: temporal and spatial</li>
+<li>Temporal locality
+
+<ul>
+<li>Using an element that you used in the past again
+
+<ul>
+<li>For loops</li>
+<li>Instruction fetches in loops</li>
+</ul>
+</li>
+<li>Using data items at approximately similar memory addresses</li>
+</ul>
+</li>
+</ul>
+
+
+<table>
+<thead>
+<tr>
+<th>CPU </th>
+<th> L1 </th>
+<th> L2 </th>
+<th> L3 </th>
+<th> Mem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RF  </td>
+<td> $  </td>
+<td> $  </td>
+<td> $  </td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+<ul>
+<li><strong>Inclusive Structure:</strong> Every higher level of cache copies everything in the lower-level caches</li>
+<li><strong>Exclusive Structure:</strong> Every higher level of cache has its own info</li>
+<li>Keep a separate <em>dirty bit</em> to flag whether or not that cache has been updated
+
+<ul>
+<li>Called a <strong>write-back cache</strong></li>
+</ul>
+</li>
+<li><strong>Cache line/cache block</strong> is a a storage block of about 64-128 bytes to designate spatial locality</li>
+<li>Every load/store that requires memory access</li>
+<li>Every memory reference must have an L1 lookup.</li>
+<li><p>If you find the item you are looking for, you have a <em>cache hit</em>; otherwise, you have a <em>cache miss</em>, and you have to go one level down.</p></li>
+<li><p>Every cache is a <em>cuckoo hash table</em>, a hash table of limited size/bucket size</p></li>
+<li>This cache is divided into columns of <strong>ways</strong>, and rows of <strong>sets</strong>
+
+<ul>
+<li><em>Ways</em> all have to have an equal size</li>
+<li>Has <em>address:value</em> pairs
+
+<ul>
+<li>Hash your address to a <em>set</em>, which has a bucket of <em>way</em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Total # of entries in your cache is $$$m \times n$$$ for <em>m</em> <strong>sets</strong> and <em>n</em> <strong>ways</strong></li>
+<li>If you have only one way per set, you have a <strong>direct map cache</strong></li>
+<li>If you only have one set, you have a <strong>fully associative cache</strong></li>
+<li>For an <strong>n-way associative</strong> set, you have n <em>ways</em> for <em>m</em> sets</li>
+</ul>
+
+
+<hr />
+
+<h3>4/29/14</h3>
+
+<h4>L1 Cache</h4>
+
+<p><img src="https://raw.githubusercontent.com/Scorpio750/Computer-Architecture-211/master/Images/L1%20Cache.png" alt="insert picture from slides" /></p>
+
+<h4>Cache Mapping</h4>
+
+<ul>
+<li>Multiple locations in memory map to the same location in cache</li>
+<li>In addition to content, cache must keep which entry it is actually caching</li>
+<li>Since caches are much faster, but smaller, you store the address of the memory location for faster lookup</li>
+</ul>
+
+
+<h4>Indexing</h4>
+
+<ul>
+<li><p>We use middle bits as an index because if we used high-bit indexing, it would result in a 100% LOAD miss [see picture from slides]</p></li>
+<li><p>for Intel's P4 L1 cache with 8kB/4-way/64b Block, with 32 sets, you have 5 s-bits, 6 t-bits, and 21 tags</p></li>
+</ul>
+
+
+<h4>Replacement</h4>
+
+<ul>
+<li>What if you have a cache miss but all entries in the set are valid?</li>
+<li>Direct-mapped cache: no decision</li>
+<li>Discard current content and bring needed content in</li>
+<li>But which line do we evict?
+
+<ul>
+<li>We need an algorithm for replacemnt</li>
+</ul>
+</li>
+<li>If we knew the future, can you think of an optimal replacement algorithm?</li>
+<li>Since we are oracles, we need to approximate:
+
+<ul>
+<li>FIFO</li>
+<li>LRU: Least Recently Used</li>
+<li>Random: Select victim from set randomly</li>
+</ul>
+</li>
+</ul>
+
+
+<h4>Fully Associative Caches</h4>
+
+<ul>
+<li>For a fully associative cache, set selection is trivial (there is only one)</li>
+<li>Accessing line is the same as a set associative cache</li>
+<li>Most flexible, (good for complex access patterns)</li>
+</ul>
+
+
+<h4>Writes and Cache</h4>
+
+<ul>
+<li>Reading information from a cache is straightforward</li>
+<li>What about writing?</li>
+<li>What if you're writing data that is already cached (write-hit)?</li>
+<li>What if the data is not in the cache (write-miss)?</li>
+<li><p>Dealing a <strong>write-hit</strong>:</p>
+
+<ul>
+<li><strong>Write-through</strong>: immediately write data back to memory</li>
+<li><strong>Write-back</strong>: defer the write to memory for as long as possible</li>
+</ul>
+</li>
+<li><p>Dealing with a <strong>write-miss</strong>:</p>
+
+<ul>
+<li><strong>write-allocate:</strong> load the block into memory and update</li>
+<li><strong>no-write-allocate:</strong> writes directly into memory</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<h2><span id="anchor6">Final Review</span></h2>
+
+<h4>Excitation Tables</h4>
+
+<table>
+<thead>
+<tr>
+<th>Current State </th>
+<th> Next State </th>
+<th> D </th>
+<th> T </th>
+<th> Set </th>
+<th> Reset </th>
+<th> J </th>
+<th> K</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 </td>
+<td> 0 </td>
+<td> 0 </td>
+<td> 0 </td>
+<td> 0 </td>
+<td> X </td>
+<td> 0 </td>
+<td> X</td>
+</tr>
+<tr>
+<td>0 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0 </td>
+<td> 1 </td>
+<td> X</td>
+</tr>
+<tr>
+<td>1 </td>
+<td> 0 </td>
+<td> 0 </td>
+<td> 1 </td>
+<td> 0 </td>
+<td> 1 </td>
+<td> X </td>
+<td> 1</td>
+</tr>
+<tr>
+<td>1 </td>
+<td> 1 </td>
+<td> 1 </td>
+<td> 0 </td>
+<td> X </td>
+<td> 0 </td>
+<td> X </td>
+<td> 0</td>
+</tr>
+</tbody>
+</table>
+
+</body>
+</html>
