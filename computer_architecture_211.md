@@ -13,6 +13,8 @@
 4. [Digital Logic](#anchor4)
 	1. [Combinational Logic](#anchor4.1)
 	2. [Sequential Logic](#anchor4.2)
+5. [Caches](#anchor5)
+6. [Final Review](#anchor6)
 
 ---
 ---
@@ -72,7 +74,7 @@
 1. ~ = complement
 2. & = bit AND
 3. | = bit OR
-4. ^ = bit XOR ($$$\ $$$) 
+4. ^ = bit XOR ($$$\oplus $$$) 
 	- ~0101 = 1010
 	- 0101 & 1010 = 0000
 	- 0101 | 1010 = 1111
@@ -257,6 +259,7 @@ File: makeFile
 - Memory Model
 	- Two types: static vs. dynamic
 		- Stack vs. Heap
+		- Activation record is the dynamic memory associated with the heap
 	- Automatic space
 		- int A[100]
 			- allocated when method is called, freed when released
@@ -830,7 +833,7 @@ $$$g_i = a_ib_i$$$ | $$$p_i = a_i + b_i$$$
 ---
 ### 4/21/14
 
-### [Memory Hierarchy and Caching](id:anchor5)
+## [Memory Hierarchy and Caching](id:anchor5)
 
 - In increasing order of $$$\mathrm L_i$$$, where L0 is the registers
 - Computers usually have 128-256 registers
@@ -935,3 +938,15 @@ RF  | $  | $  | $  |
 	- **write-allocate:** load the block into memory and update
 	- **no-write-allocate:** writes directly into memory
 
+---
+## [Final Review](id:anchor6)
+
+
+#### Excitation Tables
+
+Current State | Next State | D | T | Set | Reset | J | K
+--------------|------------|---|---|-----------|---
+0 | 0 | 0 | 0 | 0 | X | 0 | X
+0 | 1 | 1 | 1 | 1 | 0 | 1 | X
+1 | 0 | 0 | 1 | 0 | 1 | X | 1
+1 | 1 | 1 | 0 | X | 0 | X | 0
