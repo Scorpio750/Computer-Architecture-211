@@ -1,6 +1,6 @@
 # Computer Architecture 211
 # Abhisek Bhattacharjee
-# Spring 2014
+## Spring 2014
 
 ---
 ---
@@ -539,7 +539,7 @@ Binary | Hex | Octal
 		
 Example:
 	
-	mol %ebx, (%ecx)
+	movl %ebx, (%ecx)
 
 #### Machine Representation
 
